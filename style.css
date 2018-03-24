@@ -1,0 +1,653 @@
+@font-face {
+    font-family: 'hs';
+    src: url(fonts/hs.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Ubuntu, arial;
+}
+
+.wrapper {
+    width: 1400px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+body {
+    background-color: #19212c;
+    /*background-color: #2e2e2e;*/
+    /*background-color: #1b283b;*/
+    /*background-color: #314055;*/
+    /*background-color: #41474e;*/
+}
+
+#hotelbg {
+    background-image: url(hotelbg.png);
+    width: 395px;
+    height: 530px;
+    left: 0;
+    bottom: 0;
+    transition: 1s;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+    position: absolute;
+}
+
+#hotelbg:hover {
+    opacity: 1;
+}
+    
+#maintenancebg {
+    background: url(maintenancebg.png);
+    height: 380px;
+    width: 315px;
+    right: 0;
+    top: 250px;
+    opacity: 0.6;
+    position: absolute;
+    transition: 1s;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+#maintenancebg:hover {
+    opacity: 1;
+} 
+
+#title {
+    font-weight: bold;
+    position: relative;
+    color: #ffffff;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 50px;
+    text-shadow: 1px 1px 0px #000000,
+                 1px -1px 0px #000000,
+                 -1px 1px 0px #000000,
+                 -1px -1px 0px #000000,
+                 0px 3px 1px #000000;
+}
+
+#logo {
+    position: relative;
+    opacity: 0.6;
+    top: 20px;
+    transition: 1s;
+    animation: pulse 3s infinite;
+}
+
+#backtxt {
+    text-align: center;
+    position: relative;
+    color: #ffffff;
+    font-weight: bold;
+    margin-top: 19px;
+    font-size: 25px;
+    text-shadow: 1px 1px 0px #000000,
+                 1px -1px 0px #000000,
+                 -1px 1px 0px #000000,
+                 -1px -1px 0px #000000,
+                 0px 2px 1px #000000;
+}
+
+#hint {
+    color: #000000;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 20px 0px 0px 20px;
+}
+
+#hinttxt {
+    color: #000000;
+    padding: 10px 0px 35px 20px;
+    font-size: 18px;
+}
+
+#hintbox {
+    background-color: rgb(235, 235, 235);
+    border-radius: 3px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.25);
+    transition: 1s;
+    position: relative;
+}
+
+.jobs {
+    font-weight: bold;
+    padding: 20px 0px 0px 20px;
+    font-size: 18px;
+    display: flex;
+}
+
+.specs {
+    padding: 5px 20px 0px 20px;
+    font-size: 14px;
+    display: flex;
+    align-items: flex-start;
+}
+
+ul {
+    padding: 0px 0px 10px 30px;
+    margin-top: -2px;
+    line-height: 1.4;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+#after {
+    text-align: center;
+    padding: 40px 0px 20px 0px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .wrapper {
+        width: 100%;
+    }
+    #hotelbg {
+        background-image: url(hotelbg.png);
+        width: 235px;
+        height: 290px;
+        left: 0;
+        bottom: 0;
+        transition: 1s;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        opacity: 0.6;
+        position: absolute;
+    }
+    #hotelbg:hover {
+        opacity: 1;
+    }
+    #maintenancebg {
+        background: url(maintenancebg.png);
+        height: 260px;
+        width: 205px;
+        right: 0;
+        top: 250px;
+        opacity: 0.6;
+        position: absolute;
+        transition: 1s;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    #maintenancebg:hover {
+        opacity: 1;
+    } 
+    #title {
+        font-size: 30px;
+    }
+    #logo {
+        width: 28%;
+        top: 20px;
+    }
+    #backtxt {
+        font-size: 26px;
+    }
+    #hintbox {
+        width: 100%;
+    }
+    #hinttxt {
+        font-size: 15px;
+    }
+    #hint {
+        font-size: 26px;
+    }
+    .jobs {
+        font-size: 19px;
+    }
+    .specs {
+        font-size: 13px;
+    }
+    ul {
+        font-size: 15px;
+    }
+    #after {
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width:960px) {
+    .wrapper {
+        width: 100%;
+    }
+    #hotelbg {
+        background-image: url(hotelbg.png);
+        width: 235px;
+        height: 290px;
+        left: 0;
+        bottom: 0;
+        transition: 1s;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        opacity: 0.6;
+        position: absolute;
+    }
+    #hotelbg:hover {
+        opacity: 1;
+    }
+    #maintenancebg {
+        background: url(maintenancebg.png);
+        height: 260px;
+        width: 205px;
+        right: 0;
+        top: 250px;
+        opacity: 0.6;
+        position: absolute;
+        transition: 1s;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    #maintenancebg:hover {
+        opacity: 1;
+    } 
+    #title {    
+        font-size: 28px;
+    }
+    #logo {
+        width: 25%;
+        top: 16px;
+    }
+    #backtxt {
+        font-size: 24px;
+    }
+    #hintbox {
+        width: 100%;
+    }
+    #hinttxt {
+        font-size: 15px;
+    }
+    #hint {
+        font-size: 24px;
+    }
+    .jobs {
+        font-size: 18px;
+    }
+    .specs {
+        font-size: 12px;
+    }
+    ul {
+        font-size: 14px;
+    }
+    #after {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width:770px) {
+    .wrapper {
+        width: 100%;
+    }
+    #hotelbg {
+        background-image: url(hotelbg.png);
+        width: 200px;
+        height: 250px;
+        left: 0;
+        bottom: 0;
+        transition: 1s;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        opacity: 0.6;
+        position: absolute;
+    }
+    #hotelbg:hover {
+        opacity: 1;
+    }
+    #maintenancebg {
+        background: url(maintenancebg.png);
+        height: 220px;
+        width: 180px;
+        right: 0;
+        top: 250px;
+        opacity: 0.6;
+        position: absolute;
+        transition: 1s;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    #maintenancebg:hover {
+        opacity: 1;
+    } 
+    #title {
+        font-size: 25px;
+    }
+    #logo {
+        width: 25%;
+    }
+    #backtxt {
+        font-size: 22px;
+    }
+    #hintbox {
+        width: 100%;
+    }
+    #hinttxt {
+        font-size: 14px;
+    }
+    #hint {
+        font-size: 22px;
+    }
+    .jobs {
+        font-size: 18px;
+    }
+    .specs {
+        font-size: 12px;
+    }
+    ul {
+        font-size: 13px;
+    }
+    #after {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:640px) {
+    .wrapper {
+        width: 100%;
+    }
+    #hotelbg {
+        background-image: url(hotelbg.png);
+        width: 200px;
+        height: 250px;
+        left: 0;
+        bottom: 0;
+        transition: 1s;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        opacity: 0.6;
+        position: absolute;
+    }
+    #hotelbg:hover {
+        opacity: 1;
+    }
+    #maintenancebg {
+        background: url(maintenancebg.png);
+        height: 220px;
+        width: 180px;
+        right: 0;
+        top: 250px;
+        opacity: 0.6;
+        position: absolute;
+        transition: 1s;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    #maintenancebg:hover {
+        opacity: 1;
+    }  
+    #title {
+        font-size: 20px;
+    }
+    #logo {
+        width: 19%;
+        top: 12px;
+    }
+    #backtxt {
+        font-size: 19px;
+    }
+    #hintbox {
+        width: 100%;
+    }
+    #hinttxt {
+        font-size: 14px;
+        width: 96%;
+    }
+    #hint {
+        font-size: 22px;
+    }
+    .jobs {
+        font-size: 18px;
+    }
+    .specs {
+        font-size: 12px;
+    }
+    ul {
+        font-size: 13px;
+        width: 334px;
+    }
+    #after {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width:580px) {
+    .wrapper {
+        width: 100%;
+    }
+    #hotelbg {
+        background-image: url(hotelbg.png);
+        width: 200px;
+        height: 250px;
+        left: 0;
+        bottom: 0;
+        transition: 1s;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        opacity: 0.6;
+        position: absolute;
+    }
+    #hotelbg:hover {
+        opacity: 1;
+    }
+    #maintenancebg {
+        background: url(maintenancebg.png);
+        height: 220px;
+        width: 180px;
+        right: 0;
+        top: 250px;
+        opacity: 0.6;
+        position: absolute;
+        transition: 1s;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    #maintenancebg:hover {
+        opacity: 1;
+    }
+    #title {
+        font-size: 18px;
+    }
+    #logo {
+        width: 20%;
+    }
+    #backtxt {
+        font-size: 18px;
+    }
+    #hintbox {
+        width: 90%;
+    }
+    #hinttxt {
+        font-size: 14px;
+    }
+    #hint {
+        font-size: 22px;
+    }
+    .jobs {
+        font-size: 18px;
+    }
+    .specs {
+        font-size: 12px;
+    }
+    ul {
+        font-size: 13px;
+        width: 344px;
+    }
+    #after {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width:422px) {
+    .wrapper {
+        width: 100%;
+    }
+    #hotelbg {
+        background-image: url(hotelbg.png);
+        width: 200px;
+        height: 250px;
+        left: 0;
+        top: 850px;
+        transition: 1s;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        opacity: 0.6;
+        position: absolute;
+    }
+    #hotelbg:hover {
+        opacity: 1;
+    }
+    #maintenancebg {
+        background: url(maintenancebg.png);
+        height: 220px;
+        width: 180px;
+        right: 0;
+        bottom: 0;
+        opacity: 0.6;
+        position: absolute;
+        transition: 1s;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    #maintenancebg:hover {
+        opacity: 1;
+    }
+    #title {
+        font-size: 17px;
+    }
+    #logo {
+        width: 36%;
+        top: 12px;
+    }
+    #backtxt {
+        font-size: 16px;
+    }
+    #hintbox {
+        width: 90%;
+    }
+    #hinttxt {
+        font-size: 13px;
+        text-align: center;
+        padding: 20px;
+    }
+    #hint {
+        font-size: 20px;
+        text-align: center;
+    }
+    .jobs {
+        font-size: 16px;
+        justify-content: center;
+        padding-bottom: 10px;
+    }
+    .specs {
+        font-size: 12px;
+    }
+    ul {
+        font-size: 12px;
+        width: 202px;
+    }
+    #after {
+        font-size: 12px;
+        width: 88%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .wrapper {
+        width: 100%;
+    }
+    #hotelbg {
+        background-image: url(hotelbg.png);
+        width: 200px;
+        height: 250px;
+        left: 0;
+        bottom: 0;
+        transition: 1s;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        opacity: 0.6;
+        position: absolute;
+    }
+    #hotelbg:hover {
+        opacity: 1;
+    }
+    #maintenancebg {
+        background: url(maintenancebg.png);
+        height: 220px;
+        width: 180px;
+        right: 0;
+        top: 250px;
+        opacity: 0.6;
+        position: absolute;
+        transition: 1s;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    #maintenancebg:hover {
+        opacity: 1;
+    }
+    #title {
+        font-size: 20px;
+    }
+    #logo {
+        width: 36%;
+        top: 12px;
+    }
+    #backtxt {
+        font-size: 16px;
+    }
+    #hintbox {
+        width: 90%;
+    }
+    #hinttxt {
+        font-size: 13px;
+        text-align: center;
+        padding: 20px;
+    }
+    #hint {
+        font-size: 17px;
+        text-align: center;
+    }
+    .jobs {
+        font-size: 14px;
+        justify-content: center;
+        padding-bottom: 10px;
+    }
+    .specs {
+        font-size: 12px;
+    }
+    ul {
+        font-size: 12px;
+        width: 160px;
+    }
+    #after {
+        font-size: 12px;
+        width: 88%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
